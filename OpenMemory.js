@@ -19,7 +19,7 @@ Interceptor.attach(Module.findExportByName("libart.so", "_ZN3art7DexFile10OpenMe
 
         console.log("dex_size :" + dex_size)
         //dump dex 到/data/data/pkg/目录下
-        var file = new File("/data/data/io.virtualapp.luohe/" + dex_size + ".dex", "wb")
+        var file = new File("/data/data/xxx.xxx.xxx/" + dex_size + ".dex", "wb")
         file.write(Memory.readByteArray(begin, dex_size))
         file.flush()
         file.close()
