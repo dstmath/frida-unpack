@@ -21,5 +21,6 @@ ps：查看OpenMemory的导出名称，可以将手机中的libart.so通过adb p
  * android os: 7.1.2 32bit  (64位可能要改OpenMemory的签名)
  * legu: libshella-2.8.so
  * 360: libjiagu.so
-## 0x4 参考链接
+
+## 0x5 参考链接
 - [frida](https://www.frida.re)
