@@ -24,3 +24,6 @@ ps：查看OpenMemory的导出名称，可以将手机中的libart.so通过adb p
 
 ## 0x5 参考链接
 - [frida](https://www.frida.re)
+
+## 0x06 python脚本支持
+`python frida_unpack.py 应用包名`
