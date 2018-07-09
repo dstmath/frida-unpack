@@ -25,7 +25,7 @@ Interceptor.attach(Module.findExportByName("libart.so", "_ZN3art7DexFile10OpenMe
         var begin = args[1]
         
         console.log("magic : " + Memory.readUtf8String(begin))
-     
+        console.log("size : " + Memory.readUInt(args[2]))
         var address = parseInt(begin,16) + 0x20
 
         var dex_size = Memory.readInt(ptr(address))
