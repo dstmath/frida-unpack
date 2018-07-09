@@ -27,3 +27,13 @@ ps：查看OpenMemory的导出名称，可以将手机中的libart.so通过adb p
 
 ## 0x06 python脚本支持
 `python frida_unpack.py 应用包名`
+
+## 0x07 相关技巧
+- 利用`c++filt`命令还原C++ name managling之后的函数名
+
+    ```
+    c++filt _ZN3art7DexFile10OpenMemoryEPKhjRKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEjPNS_6MemMapEPKNS_10OatDexFileEPS9_
+
+    输出：
+    art::DexFile::OpenMemory(unsigned char const*, unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned int, art::MemMap*, art::OatDexFile const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)
+    ```
