@@ -7,6 +7,7 @@ frida环境搭建，参考frida官网：[frida](https://www.frida.re)。
 利用frida hook libart.so中的OpenMemory方法，拿到内存中dex的地址，计算出dex文件的大小，从内存中将dex导出。
 ps：查看OpenMemory的导出名称，可以将手机中的libart.so通过adb pull命令导出到电脑，然后利用：
 `nm libart.so |grep OpenMemory`命令来查看到出名。
+其中android 10为`/apex/com.android.runtime/lib/libdexfile.so`方法为`OpenCommon`。
 
 ## 0x3 脚本用法
 - 在手机上启动frida server端
